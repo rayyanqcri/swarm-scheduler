@@ -4,6 +4,7 @@ services:
     image: rayyanqcri/swarm-scheduler
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+      - /etc/timezone:/etc/timezone:ro
     environment:
       - DOCKER_URL=unix:///var/run/docker.sock
       - TZ=America/New_York
