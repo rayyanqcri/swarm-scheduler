@@ -6,6 +6,7 @@ services:
       - /var/run/docker.sock:/var/run/docker.sock
     environment:
       - DOCKER_URL=unix:///var/run/docker.sock
+      - TZ=America/New_York
     configs:
       - source: crontab.v1
         target: crontab
